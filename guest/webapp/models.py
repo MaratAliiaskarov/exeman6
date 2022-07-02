@@ -10,7 +10,7 @@ class Book(models.Model):
     content = models.TextField(max_length=3000, verbose_name="Content")
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Created Date")
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Updated Date")
-    status = models.CharField(max_length=50, choices=STATUS_CHOICES, default='new', verbose_name='Status')
+    status = models.CharField(max_length=50, choices=STATUS_CHOICES, default=STATUS_CHOICES[0][0], verbose_name='Status')
 
 
     def __str__(self):

@@ -14,7 +14,7 @@
         <a href="entry/add/">Created Entry</a>
         <h1>Entry</h1>
         {% for book in books %}
-            <h3>{{ book.guest_name }}</h3>
+            <h3>{{ book.guest_name }}</h3> <span>{{ book.status }} - {{ book.get_status_display }}</span>
         {% endfor %}
 
 </body>
