@@ -9,6 +9,13 @@
 <form action="/entry/add/" method="post">
     {% csrf_token %}
 
+    <label>Status:</label><br/>
+    <select name="status"><br/>
+        {% for status in statuses %}
+            <option value="{{ status.0 }}">{{ status.1 }}</option>
+        {% endfor %}
+    </select>
+    <br/>
     <label>Name:</label><br/>
     <input type="text" name="name"/><br/>
 
