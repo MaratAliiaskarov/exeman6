@@ -12,8 +12,9 @@
 </head>
 <body>
 
-        <h1>{{ name }}</h1>
-        <p>{{ test }}</p>
+        {% for book in books %}
+            <h3>{{ book.guest_name }}</h3>
+        {% endfor %}
 
 </body>
 </html>

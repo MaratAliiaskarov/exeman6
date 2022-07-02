@@ -1,11 +1,12 @@
 from django.shortcuts import render
 
 # Create your views here.
+from webapp.models import Book
+
 
 def index_view(request):
-    query = request.GET.getlist("name", "rrrrrr")
-    print(query)
-    context = {"name": query, "test": "lalalal"}
+    books = Book.objects.order_by("-created_at")
+    context = {"books": books}
     return render(request, 'index.html', context)
 
 
